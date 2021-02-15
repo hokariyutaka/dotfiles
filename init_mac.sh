@@ -18,6 +18,7 @@ if [[ $response =~ ([yY]) ]] ; then
   read HOST_NAME
   sudo scutil --set ComputerName $HOST_NAME
   sudo scutil --set LocalHostName $HOST_NAME
+  sudo scutil --set HostName $HOST_NAME
 fi
 
 # disable shadow when screencapture
