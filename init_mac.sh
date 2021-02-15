@@ -1,6 +1,6 @@
 #!/usr/bin/exec bash
 #
-# Usage: init_mac.sh
+# Usage: bash <( curl -sSL https://raw.githubusercontent.com/hokariyutaka/dotfiles/main/init_mac.sh )
 #
 
 # exec option
