@@ -1,10 +1,17 @@
 #!/usr/bin/exec bash
 #
-# Usage: bash <( curl -sSL https://raw.githubusercontent.com/hokariyutaka/dotfiles/main/init_mac.sh )
+# Usage: bash -c "$( curl -fsSL https://raw.github.com/hokariyutaka/dotfiles/main/init_mac.sh )"
 #
 
 # exec option
-# set -eux
+set -eu
+
+# 
+WORKDIR="Work"
+REPOGITORY="dotfiles"
+WORKPATH="$HOME/$WORKDIR"
+REPOGITORYPATH="$WORKPATH/$REPOGITORY"
+GITHUB_URL="https://github.com/hokariyutaka/"
 
 # get administrator password
 sudo -v
@@ -30,3 +37,23 @@ if [ ! -d $SCREENSHOT_TARGET ]; then
   mkdir -p $SCREENSHOT_TARGET
 fi
 defaults write com.apple.screencapture location $SCREENSHOT_TARGET
+
+# install homebrew (with Command Line Tools for Xcode)
+brew -v 1>/dev/null || {
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+}
+
+# check Work Directory
+if [ ! -d $WORKPATH ] ; then
+  mkdir -p $WORKPATH
+fi
+
+# get GitHub Repogitory
+if [ ! -d $REPOGITORYPATH ] ; then
+  cd $WORKPATH
+  git clone "$GITHUB_URL$REPOGITORY.git"
+fi
+
+# brew bundle
+cd "$REPOGITORYPATH/homebrew"
+brew bundle
