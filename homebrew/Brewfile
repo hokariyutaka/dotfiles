@@ -9,7 +9,7 @@ brew 'mas'
 
 # cask
 #cask '1password' # require Rosetta 2
-#cask 'appcleaner'
+cask 'appcleaner'
 #cask 'authy' # require Rosetta 2
 cask 'coteditor'
 #cask 'dropbox' # require Rosetta 2
@@ -21,9 +21,9 @@ cask 'iterm2'
 cask 'notion'
 #cask 'obs' # require Rosetta 2
 #cask 'onedrive' # require Rosetta 2
-cask 'slack'
+#cask 'slack'
 #cask 'vagrant' # require Rosetta 2
-#cask 'virtualbox' # require Rosetta 2
+cask 'virtualbox' # require Rosetta 2
 #cask 'visual-studio-code' # require Rosetta 2
 cask 'homebrew/cask-versions/visual-studio-code-insiders'
 cask 'zoom'
