@@ -38,6 +38,9 @@ if [ ! -d $SCREENSHOT_TARGET ]; then
 fi
 defaults write com.apple.screencapture location $SCREENSHOT_TARGET
 
+# I really don't want to install rozetta, but I have no choice but to install it ...
+sudo softwareupdate --install-rosetta --agree-to-license
+
 # install homebrew (with Command Line Tools for Xcode)
 brew -v 1>/dev/null || {
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
