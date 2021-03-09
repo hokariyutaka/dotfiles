@@ -23,9 +23,9 @@ cask 'notion'
 #cask 'onedrive' # require Rosetta 2
 #cask 'slack'
 #cask 'vagrant' # require Rosetta 2
-cask 'virtualbox' # require Rosetta 2
-#cask 'visual-studio-code' # require Rosetta 2
-cask 'homebrew/cask-versions/visual-studio-code-insiders'
+#cask 'virtualbox' # require Rosetta 2
+cask 'visual-studio-code'
+#cask 'homebrew/cask-versions/visual-studio-code-insiders' # switch visual-studio-code
 cask 'zoom'
 
 # mas
