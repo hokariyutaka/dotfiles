@@ -12,7 +12,7 @@ brew 'mas'
 cask 'appcleaner'
 #cask 'authy' # require Rosetta 2
 cask 'coteditor'
-#cask 'dropbox' # require Rosetta 2
+cask 'dropbox' # require Rosetta 2
 #cask 'evernote' # require Rosetta 2
 cask 'firefox'
 cask 'google-chrome'
